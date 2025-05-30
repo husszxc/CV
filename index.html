@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,65 +5,135 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>محمد الطالب احمد ولد محمودي - السيرة الذاتية</title>
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #e8f0fe; /* لون خلفية سماوي فاتح */
-    color: #2c3e50; /* أزرق داكن للنص */
+    font-family: 'Cairo', sans-serif;
+    background: linear-gradient(135deg, #283593 0%, #1a237e 100%);
+    color: #f0f0f0;
     margin: 0; padding: 0;
+    overflow-x: hidden;
   }
+
   header {
-    background-color: #4a90e2; /* أزرق سماوي متوسط */
-    color: white;
+    background-color: rgba(26, 35, 126, 0.9);
+    color: #e0e0e0;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    animation: fadeDown 1s ease forwards;
   }
   header h1 {
     margin: 0.2rem 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
   }
   header p {
     margin: 0;
-    font-size: 1rem;
-    opacity: 0.9;
+    font-size: 1.2rem;
+    opacity: 0.85;
   }
+
   main {
     max-width: 900px;
-    margin: 2rem auto;
-    background-color: white;
-    padding: 2rem 3rem;
-    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3); /* ظل أزرق فاتح */
-    border-radius: 8px;
+    margin: 3rem auto 4rem;
+    background-color: #121858;
+    padding: 3rem 3rem 4rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 12px;
+    animation: fadeUp 1.5s ease forwards;
   }
+
   section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: slideIn 0.8s ease forwards;
   }
+  section:nth-child(odd) {
+    animation-delay: 0.5s;
+  }
+  section:nth-child(even) {
+    animation-delay: 0.8s;
+  }
+
   h2 {
-    border-bottom: 2px solid #4a90e2; /* نفس لون الأزرق */
-    padding-bottom: 0.5rem;
-    color: #4a90e2;
+    border-bottom: 3px solid #1a237e;
+    padding-bottom: 0.6rem;
+    color: #1a237e;
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
   }
+  h2:hover {
+    color: #3949ab;
+    border-color: #3949ab;
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
   }
   ul li {
-    margin-bottom: 0.7rem;
-    line-height: 1.5;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    position: relative;
+    color: #ddd;
   }
-  .contact {
-    margin-top: 0.5rem;
-    font-size: 1rem;
+  ul li::before {
+    content: '•';
+    position: absolute;
+    right: 0;
+    color: #1a237e;
+    font-size: 1.5rem;
+    line-height: 0;
   }
-  .contact span {
-    display: inline-block;
-    min-width: 90px;
-    font-weight: bold;
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: #ddd;
   }
-  @media (max-width:600px) {
-    main {
-      padding: 1rem 1.5rem;
+
+  /* Animations */
+  @keyframes fadeDown {
+    0% {opacity: 0; transform: translateY(-40px);}
+    100% {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes fadeUp {
+    0% {opacity: 0; transform: translateY(40px);}
+    100% {opacity: 1; transform: translateY(0);}
+  }
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
+
+  @media (max-width: 650px) {
+    header h1 {
+      font-size: 2.2rem;
+    }
+    header p {
+      font-size: 1rem;
+    }
+    main {
+      padding: 2rem 1.5rem 3rem;
+      margin: 2rem 1rem 3rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+    }
+    ul li {
+      font-size: 1rem;
+    }
+  }
+
 </style>
 </head>
 <body>
@@ -76,12 +145,12 @@
 
 <main>
 
-<section>
+<section style="animation-delay: 0.4s;">
   <h2>الهدف الوظيفي</h2>
   <p>إيجاد مكان مناسب يساعد على تطوير مهاراتي بشكل أكبر من ناحية اللغة والإدارة العامة.</p>
 </section>
 
-<section>
+<section style="animation-delay: 0.7s;">
   <h2>المؤهلات والتعليم</h2>
   <ul>
     <li>المؤهل: ثانوي</li>
@@ -89,7 +158,7 @@
   </ul>
 </section>
 
-<section>
+<section style="animation-delay: 1s;">
   <h2>الخبرات العملية</h2>
   <ul>
     <li><strong>موظف استقبال</strong> - فندق أراك طيبة، المدينة المنورة (أكتوبر 2015 - مارس 2016)</li>
@@ -99,7 +168,7 @@
   </ul>
 </section>
 
-<section>
+<section style="animation-delay: 1.3s;">
   <h2>المهارات</h2>
   <ul>
     <li>إجادة العمل على الحاسب الآلي</li>
@@ -111,7 +180,7 @@
   </ul>
 </section>
 
-<section>
+<section style="animation-delay: 1.6s;">
   <h2>الدورات والأنشطة الاجتماعية</h2>
   <ul>
     <li>فن الإدارة</li>
@@ -122,7 +191,7 @@
   </ul>
 </section>
 
-<section>
+<section style="animation-delay: 1.9s;">
   <h2>اللغات</h2>
   <ul>
     <li>العربية</li>
